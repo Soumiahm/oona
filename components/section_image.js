@@ -1,25 +1,16 @@
 import { makeStyles } from "@material-ui/core";
-import HeroImage from "./hero_image";
 import "./theme";
-import FiberManualRecordOutlinedIcon from "@material-ui/icons/FiberManualRecordOutlined";
-import DesktopMacOutlinedIcon from "@material-ui/icons/DesktopMacOutlined";
-import LibraryAddCheckOutlinedIcon from "@material-ui/icons/LibraryAddCheckOutlined";
-
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
-import Button from "@material-ui/core/Button";
-import Link from "next/link";
-
-
 
 const SectionImage = (props) => {
-
   const useStyles = makeStyles((theme) => ({
     root: {
       padding: "5rem",
-      backgroundColor: `${props.backgroundColor? props.backgroundColor : "#fff"}`,
-
+      backgroundColor: `${
+        props.backgroundColor ? props.backgroundColor : "#fff"
+      }`,
     },
     image: {
       maxWidth: "100%",

@@ -13,7 +13,6 @@ import Link from "../components/link";
 import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
 import MainAppBar from "../components/main_appbar";
-import { AllInboxOutlined } from "@material-ui/icons";
 import { Typography } from "@material-ui/core";
 import Footer from "../components/footer.js";
 // import SectionImage from "../components/section_image";

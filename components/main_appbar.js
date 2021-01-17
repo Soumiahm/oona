@@ -3,7 +3,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Toolbar from "@material-ui/core/Toolbar";
 import AppBar from "@material-ui/core/AppBar";
-import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import MenuIcon from "@material-ui/icons/Menu";
@@ -13,9 +12,7 @@ import Dialog from "@material-ui/core/Dialog";
 import Divider from "@material-ui/core/Divider";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import PersonIcon from "@material-ui/icons/Person";
-import { useRouter } from 'next/router'
-
-
+import { useRouter } from "next/router";
 
 import Logo from "./logo";
 
@@ -75,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
     border: `0.1rem solid #2E3B4C`,
     fontWeight: "400",
   },
-  dividerStyle:{
+  dividerStyle: {
     // color: "#fff",
     backgroundColor: "#fff",
   },
@@ -95,21 +92,23 @@ const MainAppBar = () => {
   const router = useRouter();
 
   const [open, setOpen] = useState(false);
-  
+
   const handleOpenMenu = () => {
     setOpen(true);
   };
 
   const handleCloseMenu = () => {
-  
-      setOpen(false);
+    setOpen(false);
   };
 
   const trigger = useScrollTrigger();
 
   return (
-    
-    <AppBar position="fixed" elevation={trigger? 4: 0} className={classes.appBar} >
+    <AppBar
+      position="fixed"
+      elevation={trigger ? 4 : 0}
+      className={classes.appBar}
+    >
       <Toolbar>
         <Grid container alignItems="center" justify="space-between">
           <Grid item>
@@ -147,28 +146,27 @@ const MainAppBar = () => {
                 </Grid>
 
                 <Grid item>
-                <Button
-                  component={Link}
-                  href="/login"
-                  variant="outlined"
-                
-                  className={`${classes.appBarLink} ${classes.loginLink}`}
-                  startIcon={<PersonIcon />}
-                >
-                  Se connecter
-                </Button>
-              </Grid>
-              <Grid item>
-                <Button
-                  component={Link}
-                  href="/expediteur-transporteur-routing"
-                  variant="contained"
-                  color="secondary"
-                  className={`${classes.appBarLink} ${classes.signupLink}`}
-                >
-                  Inscription
-                </Button>
-              </Grid>
+                  <Button
+                    component={Link}
+                    href="/login"
+                    variant="outlined"
+                    className={`${classes.appBarLink} ${classes.loginLink}`}
+                    startIcon={<PersonIcon />}
+                  >
+                    Se connecter
+                  </Button>
+                </Grid>
+                <Grid item>
+                  <Button
+                    component={Link}
+                    href="/expediteur-transporteur-routing"
+                    variant="contained"
+                    color="secondary"
+                    className={`${classes.appBarLink} ${classes.signupLink}`}
+                  >
+                    Inscription
+                  </Button>
+                </Grid>
 
                 <Grid item>
                   <Button
@@ -215,22 +213,17 @@ const MainAppBar = () => {
                 </Grid>
 
                 <Grid item>
-                <Divider className={classes.dividerStyle} />
-                </Grid>
-               
-                <Grid item >
-                <p className={classes.link} style={{fontSize: "15px"}}>
-                (212) 613 346786
-
-                  </p>
-                  <p className={classes.link} style={{fontSize: "15px"}}>
-                  contact@oona.com
-
-                  </p>
+                  <Divider className={classes.dividerStyle} />
                 </Grid>
 
-                
-
+                <Grid item>
+                  <p className={classes.link} style={{ fontSize: "15px" }}>
+                    (212) 613 346786
+                  </p>
+                  <p className={classes.link} style={{ fontSize: "15px" }}>
+                    contact@oona.com
+                  </p>
+                </Grid>
 
                 {/* <Grid item>
                   <Button
@@ -285,7 +278,7 @@ const MainAppBar = () => {
                   société
                 </Button>
               </Grid>
-{/* 
+              {/* 
               <Grid item>
                 <Button
                   component={Link}

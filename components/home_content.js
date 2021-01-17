@@ -1,19 +1,13 @@
 import { makeStyles } from "@material-ui/core";
 import HeroImage from "./hero_image";
-
 import "./theme";
 import InfoSection from "./info_section";
-import FiberManualRecordOutlinedIcon from "@material-ui/icons/FiberManualRecordOutlined";
-import StorageIcon from "@material-ui/icons/Storage";
-import DesktopMacOutlinedIcon from "@material-ui/icons/DesktopMacOutlined";
 import LibraryAddCheckOutlinedIcon from "@material-ui/icons/LibraryAddCheckOutlined";
-
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 import Button from "@material-ui/core/Button";
 import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
 import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
