@@ -8,14 +8,14 @@
     "start": "next start"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.2",
     "@material-ui/icons": "^4.11.2",
-    "@material-ui/core": "latest",
     "clsx": "latest",
+    "fontsource-roboto": "^3.1.5",
     "next": "latest",
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "fontsource-roboto": "^3.1.5",
     "react-hook-form": "^6.13.0",
     "react-icons": "^4.1.0"
   }
