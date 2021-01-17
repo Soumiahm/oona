@@ -84,7 +84,7 @@ const HomeContent = () => {
           alignItems="center"
           padding="2rem"
         >
-          <Typography variant="h5" component="h2" textColor="secondary">
+          <Typography variant="h5" component="h2">
             Lorsque la livraison fonctionne mieux, le monde entier fonctionne
             mieux aussi
           </Typography>
