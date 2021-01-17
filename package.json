@@ -8,15 +8,14 @@
     "start": "next start"
   },
   "dependencies": {
-    "@date-io/date-fns": "^2.10.6",
-    "@material-ui/core": "^5.0.0-alpha.23",
     "@material-ui/icons": "^4.11.2",
-    "@material-ui/pickers": "^3.2.10",
-    "date-fns": "^2.16.1",
+    "@material-ui/core": "latest",
+    "clsx": "latest",
+    "next": "latest",
+    "prop-types": "latest",
+    "react": "latest",
+    "react-dom": "latest",
     "fontsource-roboto": "^3.1.5",
-    "next": "10.0.3",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
     "react-hook-form": "^6.13.0",
     "react-icons": "^4.1.0"
   }
