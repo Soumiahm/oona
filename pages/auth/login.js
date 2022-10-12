@@ -10,11 +10,11 @@ import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 import Typography from "@material-ui/core/Typography";
 
-import Link from "../components/link";
+// import Link from "../../components/link";
 import Button from "@material-ui/core/Button";
 import Box from "@material-ui/core/Box";
-import MainAppBar from "../components/main_appbar";
-import LoginForm from "../components/login_form";
+import MainAppBar from "../../components/main_appbar";
+import LoginForm from "../../components/login_form";
 
 const useStyles = makeStyles({
   root: {
@@ -27,10 +27,9 @@ const useStyles = makeStyles({
     // backgroundRepeat: "no-repeat",
     // backgroundSize: "cover",
     // position: "relative",
-
   },
   title: {
-      // color: "#fff",
+    // color: "#fff",
     // color: "rgba(255,255,255,.9)",
     letterSpacing: "0.12rem",
     fontWeight: "bold",
@@ -38,7 +37,6 @@ const useStyles = makeStyles({
     lineHeight: "1.25em",
     marginTop: "8px",
     // marginBottom: "8px",
-
   },
   subTitle: {
     // color: "#fff",
@@ -46,21 +44,20 @@ const useStyles = makeStyles({
     fontSize: "20px",
   },
   container: {
-      paddingTop: "80px",
+    paddingTop: "80px",
   },
   formContainer: {
     //   backgroundColor: "#fff",
-      // padding: "10%",
+    // padding: "10%",
   },
   inputForm: {
-      color: "#fff",
-    border:"none",
-	padding:"15px 100px",
-	borderRadius:"25px",
-    backgroundColor:"rgba(255,255,255,.3)",
+    color: "#fff",
+    border: "none",
+    padding: "15px 100px",
+    borderRadius: "25px",
+    backgroundColor: "rgba(255,255,255,.3)",
     marginTop: "10px",
   },
-  
 });
 
 const Login = () => {
@@ -70,7 +67,13 @@ const Login = () => {
     <div className={classes.root}>
       <MainAppBar />
 
-      <Grid container direction="column"  alignItems="center" spacing={2} className={classes.container}>
+      <Grid
+        container
+        direction="column"
+        alignItems="center"
+        spacing={2}
+        className={classes.container}
+      >
         {/* <Grid item>
           <Typography variant="h4" color="textSecondary" component="h2" className={classes.title}>
             Connexion
@@ -83,10 +86,9 @@ const Login = () => {
           </Typography>
         </Grid> */}
         <Grid item className={classes.formContainer}>
-            <LoginForm/>
+          <LoginForm />
         </Grid>
       </Grid>
-
     </div>
   );
 };

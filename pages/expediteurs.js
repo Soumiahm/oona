@@ -5,7 +5,6 @@ import Button from "@material-ui/core/Button";
 import SectionImage from "../components/section_image";
 import Link from "../components/link";
 
-
 export default function Shippers() {
   return (
     <div>

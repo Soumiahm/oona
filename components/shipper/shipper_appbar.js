@@ -59,9 +59,12 @@ const ShipperAppBar = () => {
 
   const trigger = useScrollTrigger();
 
-
   return (
-    <AppBar position="static" elevation={trigger? 2: 0} className={classes.appBar}>
+    <AppBar
+      position="static"
+      elevation={trigger ? 2 : 0}
+      className={classes.appBar}
+    >
       <Toolbar>
         <Grid
           container

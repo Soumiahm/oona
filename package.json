@@ -4,19 +4,27 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next dev && next build",
+    "build": "next build",
     "start": "next start"
   },
   "dependencies": {
-    "@material-ui/core": "^4.11.2",
-    "@material-ui/icons": "^4.11.2",
+    "@material-ui/core": "latest",
+    "@material-ui/icons": "latest",
     "clsx": "latest",
-    "fontsource-roboto": "^3.1.5",
+    "firebase": "latest",
+    "fontsource-roboto": "latest",
+    "isomorphic-fetch": "latest",
     "next": "latest",
+    "next-redux-wrapper": "latest",
     "prop-types": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "react-hook-form": "^6.13.0",
-    "react-icons": "^4.1.0"
+    "react-hook-form": "latest",
+    "react-icons": "latest",
+    "react-redux": "latest",
+    "redux": "latest",
+    "redux-devtools-extension": "latest",
+    "redux-logger": "latest",
+    "redux-thunk": "latest"
   }
 }

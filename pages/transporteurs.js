@@ -54,7 +54,6 @@ const Carriers = () => {
         title="Conception simple, capacités avancées"
         description="Prenez le contrôle de votre entreprise avec une application qui facilite plus que jamais la réservation et la gestion des charges. Opérez plus efficacement sur vos itinéraires, à vos conditions."
         imageLink="/app-pic1.jpg"
-        
         firstButton={
           <a href={appUrl}>
             <img src="/google-play.png" className={classes.appStoreButton} />
@@ -65,7 +64,6 @@ const Carriers = () => {
             <img src="/app-store.png" className={classes.appStoreButton} />
           </a>
         }
-
       />
 
       <SectionImage

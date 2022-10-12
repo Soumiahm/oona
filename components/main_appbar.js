@@ -14,6 +14,7 @@ import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import PersonIcon from "@material-ui/icons/Person";
 import { useRouter } from "next/router";
 
+import { APP_NAME } from "../config";
 import Logo from "./logo";
 
 import Link from "./link";
@@ -101,6 +102,11 @@ const MainAppBar = () => {
     setOpen(false);
   };
 
+  const pageLink = async (link) => {
+    await router.push(link);
+    handleCloseMenu();
+  };
+
   const trigger = useScrollTrigger();
 
   return (
@@ -135,7 +141,7 @@ const MainAppBar = () => {
                 >
                   <Grid item>
                     <Typography variant="h6" className={classes.title}>
-                      Oona
+                      {APP_NAME}
                     </Typography>
                   </Grid>
                   <Grid item>
@@ -147,8 +153,7 @@ const MainAppBar = () => {
 
                 <Grid item>
                   <Button
-                    component={Link}
-                    href="/login"
+                    onClick={() => pageLink("/auth/login")}
                     variant="outlined"
                     className={`${classes.appBarLink} ${classes.loginLink}`}
                     startIcon={<PersonIcon />}
@@ -158,8 +163,9 @@ const MainAppBar = () => {
                 </Grid>
                 <Grid item>
                   <Button
-                    component={Link}
-                    href="/expediteur-transporteur-routing"
+                    // component={Link}
+                    // href="/expediteur-transporteur-routing"
+                    onClick={() => pageLink("/expediteur-transporteur-routing")}
                     variant="contained"
                     color="secondary"
                     className={`${classes.appBarLink} ${classes.signupLink}`}
@@ -171,8 +177,7 @@ const MainAppBar = () => {
                 <Grid item>
                   <Button
                     fullWidth
-                    component={Link}
-                    href="/"
+                    onClick={() => pageLink("/")}
                     className={classes.link}
                   >
                     Accueil
@@ -182,8 +187,9 @@ const MainAppBar = () => {
                 <Grid item>
                   <Button
                     fullWidth
-                    component={Link}
-                    href="/expediteurs"
+                    // component={Link}
+                    // href="/expediteurs"
+                    onClick={() => pageLink("/expediteurs")}
                     className={classes.link}
                   >
                     Expediteurs
@@ -193,8 +199,9 @@ const MainAppBar = () => {
                 <Grid item>
                   <Button
                     fullWidth
-                    component={Link}
-                    href="/transporteurs"
+                    // component={Link}
+                    // href="/transporteurs"
+                    onClick={() => pageLink("/transporteurs")}
                     className={classes.link}
                   >
                     Transporteurs
@@ -204,8 +211,9 @@ const MainAppBar = () => {
                 <Grid item>
                   <Button
                     fullWidth
-                    component={Link}
-                    href="/about"
+                    // component={Link}
+                    // href="/about"
+                    onClick={() => pageLink("/about")}
                     className={classes.link}
                   >
                     société
@@ -301,7 +309,7 @@ const MainAppBar = () => {
               <Grid item>
                 <Button
                   component={Link}
-                  href="/login"
+                  href="auth/login"
                   variant="outlined"
                   className={`${classes.appBarLink} ${classes.loginLink}`}
                   startIcon={<PersonIcon />}

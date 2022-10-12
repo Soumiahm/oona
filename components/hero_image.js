@@ -3,15 +3,14 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import Grid from "@material-ui/core/Grid";
 
-
 const HeroImage = (props) => {
   const useStyles = makeStyles((theme) => ({
     root: {},
 
     hero: {
-        backgroundColor: "#000" ,
+      backgroundColor: "#000",
       backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(${props.imageLink})`,
-      height: `${props.height? props.height : "600px"}`,
+      height: `${props.height ? props.height : "600px"}`,
 
       backgroundPosition: "bottom",
       backgroundRepeat: "no-repeat",
@@ -25,12 +24,10 @@ const HeroImage = (props) => {
       color: "#fff",
     },
     description: {
-
       fontSize: "25px",
       letterSpacing: "2px",
       fontWeight: "500",
       color: "#fff",
-
     },
     heroSection: {
       height: "100%",
@@ -44,11 +41,9 @@ const HeroImage = (props) => {
       <Grid container alignItems="center" className={classes.heroSection}>
         <Grid item container direction="column" spacing={4}>
           <Grid item xs={10} md={6}>
-            <Box className={classes.heroText}>
-              {props.title}
-            </Box>
+            <Box className={classes.heroText}>{props.title}</Box>
           </Grid>
-       
+
           <Grid
             item
             container
@@ -56,14 +51,11 @@ const HeroImage = (props) => {
             // direction="row"
             justify="space-between"
             alignItems="flex-start"
-            xs={10} md={4}
+            xs={10}
+            md={4}
           >
-            <Grid item>
-             {props.firstButton}
-            </Grid>
-            <Grid item>
-              {props.secondButton}
-            </Grid>
+            <Grid item>{props.firstButton}</Grid>
+            <Grid item>{props.secondButton}</Grid>
           </Grid>
         </Grid>
       </Grid>

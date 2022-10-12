@@ -5,21 +5,22 @@ import { useForm } from "react-hook-form";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import TextField from "@material-ui/core/TextField";
-import Grid from "@material-ui/core/grid";
+import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import Link from "../link";
+import { AuthSendSignInLinkToEmail } from "../../firebase/firebase_utils";
 
-const initialValues = {
-  //Le champ est requis
-  name: "",
-  lastName: "",
-  jobTitle: "",
-  company: "",
-  email: "",
-  password: "",
-  phone: "",
-  created: new Date(),
-};
+// const initialValues = {
+//   //Le champ est requis
+//   name: "",
+//   lastName: "",
+//   jobTitle: "",
+//   company: "",
+//   email: "",
+//   password: "",
+//   phone: "",
+//   created: new Date(),
+// };
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -55,11 +56,48 @@ const SignupForm = () => {
   const classes = useStyles();
   const { register, handleSubmit } = useForm();
 
-  const [trackingNumber, setTrackingNumber] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [jobTitle, setJobTitle] = useState("");
+  const [company, setCompany] = useState("");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState("");
 
-  const onSubmitBasics = (data) => {
-    console.log(data);
-    setTrackingNumber(data.trackingNumber);
+  const onSubmitBasics = async (data) => {
+
+    alert(JSON.stringify(data));
+
+    //here I should call signup function from redux 
+    //give it the new user info 
+    //but first add error handling to the form
+    //this function will send a request to the backend and try to sign up the user
+    //it will then return the user response
+    //how about loading? error? ..
+
+    // console.log(data);
+    // setFirstName(data.firstName);
+    // setLastName(data.lastName);
+    // setJobTitle(data.jobTitle);
+    // setCompany(data.company);
+    // setEmail(data.email);
+    // setPhone(data.phone);
+    // const config = {
+    //   url: process.env.REGISTER_REDIRECT_URL,
+    //   handleCodeInApp: true,
+    // };
+    // try {
+    //   await AuthSendSignInLinkToEmail(data.email, config);
+    //   //use router to push the new page
+    //   console.log(
+    //     `email is sent to ${data.email} Click the link to complete your registration`
+    //   );
+    //   //save email in local storage
+    //   window.localStorage.setItem("emailForRegistration", data.email);
+    //   //clear state
+    //   setEmail("");
+    // } catch (e) {
+    //   console.log("errrrooooor: " + e.message);
+    // }
   };
 
   return (
@@ -72,8 +110,6 @@ const SignupForm = () => {
       >
         Inscription
       </Typography>
-    
-
       <form onSubmit={handleSubmit(onSubmitBasics)}>
         <Grid container direction="column">
           <Grid item container spacing={2}>
@@ -81,29 +117,27 @@ const SignupForm = () => {
               <TextField
                 size="small"
                 required
+                name="firstName"
+                inputRef={register}
                 variant="outlined"
                 fullWidth
                 id="firstName"
                 label="Prénom"
-                name="firstName"
                 type="text"
                 // autoFocus
-                // autoComplete = ?
-                //required
               />
             </Grid>
             <Grid item xs={6}>
               <TextField
                 size="small"
                 required
+                inputRef={register}
                 variant="outlined"
                 fullWidth
                 id="lastName"
                 label="Nom"
                 name="lastName"
                 type="text"
-                // autoComplete = ?
-                //required
               />
             </Grid>
           </Grid>
@@ -112,28 +146,26 @@ const SignupForm = () => {
               <TextField
                 size="small"
                 required
+                inputRef={register}
                 variant="outlined"
                 fullWidth
                 id="company"
                 label="Société"
                 name="company"
                 type="text"
-                // autoComplete = ?
-                //required
               />
             </Grid>
             <Grid item xs={6}>
               <TextField
                 size="small"
                 required
+                inputRef={register}
                 variant="outlined"
                 fullWidth
                 id="jobTitle"
                 label="Titre d'emploi"
                 name="jobTitle"
                 type="text"
-                // autoComplete = ?
-                //required
               />
             </Grid>
           </Grid>
@@ -142,42 +174,39 @@ const SignupForm = () => {
             <TextField
               size="small"
               required
+              inputRef={register}
               variant="outlined"
               fullWidth
               id="email"
               label="Email"
               name="email"
               type="email"
-              // autoComplete = ?
-              //required
             />
           </Grid>
           <Grid item>
             <TextField
               size="small"
               required
+              inputRef={register}
               variant="outlined"
               fullWidth
               id="phone"
               label="Téléphone"
               name="phone"
               type="tel"
-              // autoComplete = ?
-              //required
             />
           </Grid>
           <Grid item>
             <TextField
               size="small"
               required
+              name="password"
+              inputRef={register}
               variant="outlined"
               fullWidth
               id="password"
               label="Mot de passe"
-              name="password"
               type="password"
-              // autoComplete = ?
-              //required
             />
           </Grid>
         </Grid>
@@ -192,13 +221,22 @@ const SignupForm = () => {
             </Typography>
           </Grid>
           <Grid item>
-            <Button
+            {/* <Button
               variant="contained"
               color="secondary"
               // fullWidth
               component={Link}
               href="/shipper/my-shipments"
               className={classes.submitBtn}
+            >
+              Créer mon compte
+            </Button> */}
+            <Button
+              variant="contained"
+              color="secondary"
+              // fullWidth
+              className={classes.submitBtn}
+              type="submit"
             >
               Créer mon compte
             </Button>
@@ -211,7 +249,7 @@ const SignupForm = () => {
         <Button
           variant="inherit"
           component={Link}
-          href="/login"
+          href="/auth/login"
           style={{ textTransform: "lowercase" }}
         >
           Connectez-vous

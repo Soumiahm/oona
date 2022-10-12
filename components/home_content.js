@@ -20,7 +20,6 @@ const useStyles = makeStyles((theme) => ({
   userCard: {
     boxShadow: "none",
     paddingTop: "20px",
-    
   },
   media: {
     height: 380,
@@ -43,7 +42,7 @@ const HomeContent = () => {
 
   return (
     <div className={classes.root}>
-     <HeroImage
+      <HeroImage
         title="ÉCONOMISEZ DE L'ARGENT, GAGNEZ DU TEMPS"
         description="section description"
         imageLink="/truck2.jpg"
@@ -69,7 +68,7 @@ const HomeContent = () => {
             Transporteurs
           </Button>
         }
-      /> 
+      />
 
       <Box className={classes.infoSection}>
         <Box
@@ -109,7 +108,7 @@ const HomeContent = () => {
           />
         </Grid>
       </Box>
-       <Box padding="2% 5%">
+      <Box padding="2% 5%">
         <Grid
           container
           direction="row"
@@ -128,27 +127,25 @@ const HomeContent = () => {
                 <Typography gutterBottom variant="h5" component="h2">
                   Transporteurs
                 </Typography>
-                <Typography variant="body2"  component="p">
+                <Typography variant="body2" component="p">
                   Réservations plus flexibles, Optimisez le déplacement de vos
                   camions grâce a l’économie de partage
                 </Typography>
               </CardContent>
 
               <CardActions>
-                
                 <Button
                   component={Link}
                   href="/transporteurs"
-                  size="small" color="secondary"
+                  size="small"
+                  color="secondary"
                 >
                   En savoir plus
-                </Button> 
-
-
+                </Button>
               </CardActions>
             </Card>
           </Grid>
-          
+
           <Grid item xs={12} md={6}>
             <Card className={classes.userCard}>
               <CardMedia
@@ -158,27 +155,27 @@ const HomeContent = () => {
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                Expediteurs
+                  Expediteurs
                 </Typography>
-                <Typography variant="body2"  component="p">
-                Économisez jusqu’a 30% sur la transport de votre marchandise
-                grâce a l’économie collaborative Réservations plus flexibles.
+                <Typography variant="body2" component="p">
+                  Économisez jusqu’a 30% sur la transport de votre marchandise
+                  grâce a l’économie collaborative Réservations plus flexibles.
                 </Typography>
               </CardContent>
               <CardActions>
-               
                 <Button
                   component={Link}
                   href="/expediteurs"
-                  size="small" color="secondary"
+                  size="small"
+                  color="secondary"
                 >
                   En savoir plus
-                </Button> 
+                </Button>
               </CardActions>
             </Card>
           </Grid>
         </Grid>
-      </Box> 
+      </Box>
     </div>
   );
 };

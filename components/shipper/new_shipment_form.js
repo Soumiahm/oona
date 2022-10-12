@@ -8,7 +8,6 @@ import Container from "@material-ui/core/Container";
 import Divider from "@material-ui/core/Divider";
 import InputAdornment from "@material-ui/core/InputAdornment";
 
-
 import { useForm } from "react-hook-form";
 
 const initialShipmentValues = {
@@ -59,7 +58,6 @@ const useStyles = makeStyles((theme) => ({
   title: {
     marginBottom: "30px",
     fontWeight: "500",
-
   },
   form: {
     width: "100%", // Fix IE 11 issue.
@@ -96,9 +94,14 @@ const NewShipmentForm = () => {
     //     {text}
     //   </Box>{" "}
     // </Typography>
-    <Typography variant="subtitle1" color="textSecondary" component="h2" style={{color: "#393939"}}>
-    {text}
-  </Typography>
+    <Typography
+      variant="subtitle1"
+      color="textSecondary"
+      component="h2"
+      style={{ color: "#393939" }}
+    >
+      {text}
+    </Typography>
   );
 
   return (
@@ -120,16 +123,13 @@ const NewShipmentForm = () => {
             </Typography> */}
 
             <Typography
-                    variant="body1"
-                    color="textSecondary"
-                    component="h2"
-                   className={classes.title}
-
-                  >
+              variant="body1"
+              color="textSecondary"
+              component="h2"
+              className={classes.title}
+            >
               Bonjour Ahmad, que souhaitez-vous expédier?
-                    
-                  </Typography>
-
+            </Typography>
           </Grid>
         </Grid>
 
@@ -331,8 +331,9 @@ const NewShipmentForm = () => {
               </Grid>
             </Grid>
             <Grid item container xs={12} sm={6} spacing={1}>
-
-              <Grid item xs={12}>{sectionTitle("Adresse de livraison")}</Grid>
+              <Grid item xs={12}>
+                {sectionTitle("Adresse de livraison")}
+              </Grid>
               <Grid item xs={12}>
                 <label>Addresse</label>
                 <TextField

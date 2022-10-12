@@ -11,40 +11,38 @@ import Grid from "@material-ui/core/Grid";
 
 import Link from "../components/link";
 import Button from "@material-ui/core/Button";
-import Box from '@material-ui/core/Box';
+import Box from "@material-ui/core/Box";
 import MainAppBar from "../components/main_appbar";
 
-
-
-
 const useStyles = makeStyles({
-    root: {
-        backgroundColor: "#eee",
-        height: "100vh",
-      },
-//   drawer: {
-//     width: "95%",
-//   },
+  root: {
+    backgroundColor: "#eee",
+    height: "100vh",
+  },
+  //   drawer: {
+  //     width: "95%",
+  //   },
 });
 
-
-const Contact = () =>  {
+const Contact = () => {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
-        <MainAppBar/>
+      <MainAppBar />
 
-        <Grid container justify="center" alignItems="center" style={{height:"100%"}}>
-
-            <Grid item><h1>Contact us</h1></Grid>
-            
-
+      <Grid
+        container
+        justify="center"
+        alignItems="center"
+        style={{ height: "100%" }}
+      >
+        <Grid item>
+          <h1>Contact us</h1>
         </Grid>
-
-        
+      </Grid>
     </div>
   );
-}
+};
 
 export default Contact;
